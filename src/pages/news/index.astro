@@ -2,10 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import Header_component from "./HeaderComponent.svelte";
 import ImageCarousel from "./ImageCarousel.svelte";
-import PostComponent from "./PostComponent.astro";
+import PostComponent from "../../components/PostComponent.astro";
 import prisma from "../../lib/prismaClient";
 
 const posts = await prisma.post.findMany();
+
 ---
 
 <Layout>
@@ -186,7 +187,7 @@ const posts = await prisma.post.findMany();
 							</div>
 
 							{
-								posts.slice(12, 18).map(function (post) {
+								posts.slice(12, 18).map(function (post) {									
 									return <PostComponent post={post} />;
 								})
 							}
