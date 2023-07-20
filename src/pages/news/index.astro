@@ -1,8 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Header_component from "./HeaderComponent.svelte";
-import ImageCarousel from "./ImageCarousel.svelte";
-import PostComponent from "./PostComponent.astro";
+import Header_component from "../../components/HeaderComponent.svelte";
+import ImageCarousel from "../../components/ImageCarousel.svelte";
+import PostComponent from "../../components/PostComponent.astro";
 import prisma from "../../lib/prismaClient";
 
 const posts = await prisma.post.findMany();

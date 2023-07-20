@@ -1,9 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Disposable_income from "./DisposableIncome.svelte";
-import Budget_list from "./BudgetList.astro";
-import Entries_list from "./EntriesList.svelte";
-import NewTransaction from "./NewTransaction.svelte";
+import Disposable_income from "../../components/DisposableIncome.svelte";
+import Budget_list from "../../components/BudgetList.astro";
+import Entries_list from "../../components/EntriesList.svelte";
+import NewTransaction from "../../components/NewTransaction.svelte";
 import prisma from "../../lib/prismaClient";
 
 const transactions = await prisma.transaction.findMany();
